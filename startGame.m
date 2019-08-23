@@ -1,4 +1,4 @@
-function [] = game()
+function [] = startGame()
 tabla = ['- - -';'- - -';'- - -'];
 newgame = ['---';'---';'---'];
 disp("Welcome to Tic Tac Toe!");
@@ -89,14 +89,14 @@ function [game,newgame,ok,tabla,z,player,computer] = new_session(game,newgame,ok
   [tabla,game] = show(game);
   while k == 0
     disp("Do who wanna play with another symbol?");
-    aux = input("Type YES or NO ","s");
+    aux = input("Type YEAH or NOPE ","s");
     aux = toupper(aux);
-    if aux == 'NO'
+    if aux == 'NOPE'
       disp("The settings are the same. Enjoy!");
       k = 1;
       break
     endif
-    if aux == 'YES'
+    if aux == 'YEAH'
       player = input ("I wanna play with ","s");
       player = toupper(player);
       [player computer] = play(player);
